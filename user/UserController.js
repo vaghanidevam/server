@@ -59,6 +59,7 @@ exports.sendOTP = async (req, res) => {
 exports.signUp = async (req, res) => {
    
 try {
+  console.log("SignUp Function")
      // data fetch from req boady
     const {
         firstName,
