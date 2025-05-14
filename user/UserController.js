@@ -164,9 +164,10 @@ console.log(req.body)
 
 exports.login = async (req,res)=>{
     try {
-        
+        console.log("Login Function")
         //get data req
       const {email, password} =req.body;
+      console.log(req.body)
         //validation
 if(!email||!password){
     return res.status(400).json({
@@ -184,7 +185,7 @@ if(!email||!password){
       }
         //generate jwt , after passwrd match
 
-      if( await becrypt.compare(password, user.password)){
+      if( await bcrypt.compare(password, user.password)){
         const payload = {
             email: user.email,
             id: user._id,
