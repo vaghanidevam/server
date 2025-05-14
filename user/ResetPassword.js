@@ -1,7 +1,7 @@
 const User = require("../user/user");
 const jwt=require("jsonwebtoken");
 const mailSender = require("../utils/mailSender");
-const becrypt = require("bcrypt")
+const bcrypt = require('bcryptjs');
 const crypto=require("crypto");
 // RERSET PASWWORD TOKEN 
 
